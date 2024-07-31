@@ -1,7 +1,6 @@
 GIT
   remote: https://github.com/decidim-ice/decidim-module-decidim_awesome.git
-  revision: 6a6ad3bec77c92aa83e64659c89a3839a1aab3de
-  branch: feat/clear-old-data
+  revision: 172661ff5145a4a95f181901cdf98089eaed7e72
   specs:
     decidim-decidim_awesome (0.11.1)
       decidim-admin (>= 0.28.0, < 0.29)
