@@ -52,7 +52,7 @@ COPY ./config /app/config
 COPY ./db /app/db
 COPY ./lib /app/lib
 COPY ./packages /app/packages
-COPY ./public/pdfjs /app/public/pdfjs
+# COPY ./public/pdfjs /app/public/pdfjs
 COPY ./public/*.* /app/public/
 COPY ./config.ru /app/config.ru
 COPY ./Rakefile /app/Rakefile
