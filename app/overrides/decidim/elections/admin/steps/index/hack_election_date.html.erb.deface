@@ -1,0 +1,19 @@
+<!-- insert_before "erb[silent]:contains('if @form.main_button?')" -->
+
+<div class="card mb-4">
+	<div class="p-4">
+<%
+	if params.has_key?("reset_start_date")
+		if election.start_time > Time.current
+			election.start_time = Time.current
+			election.save!
+			%>Data canviada a <strong><%= election.start_time %></strong>.<br><a class="button button__sm button__secondary" href="<%= request.path %>">Renovar la pagina</a><%
+		else
+			%>La data actual ja està en el passat: <strong><%= election.start_time %></strong><%
+		end
+	end
+%>
+		<h4>Date hacker:</h4>
+		<a class="button button__sm button__primary" href="?reset_start_date=1">Avançar la data de l'elecció a ara mateix</a>
+	</div>
+</div>
